@@ -9,12 +9,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class JdbcCrudOpration {
+public class JdbcCrudSessioon {
 	public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+	 static String url = "jdbc:mysql://localhost:3306/jdbc";
 	public static void insertValue() {
 		try {
-			String url = "jdbc:mysql://localhost:3306/Employee";
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			String userName = "root";
 			String password = "root";
@@ -50,7 +49,7 @@ public class JdbcCrudOpration {
 	public static void updateValue() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3306/Employee";
+			
 			String userName = "root";
 			String password = "root";
 			Connection con = DriverManager.getConnection(url, userName, password);
@@ -82,7 +81,6 @@ public class JdbcCrudOpration {
 	public static void deleteValue() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3306/Employee";
 			String userName = "root";
 			String password = "root";
 			Connection con = DriverManager.getConnection(url, userName, password);
@@ -110,7 +108,6 @@ public class JdbcCrudOpration {
 	public static void getFetchValue() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			String url = "jdbc:mysql://localhost:3306/Employee";
 			String userName = "root";
 			String password = "root";
 			Connection con = DriverManager.getConnection(url, userName, password);
